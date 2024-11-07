@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+body{
+    background-color:thistle;
+}
+h1{
+    height: 5rem;
+    background-color: #081b31;
+    color: #fff;
+    line-height: 5rem;
+    text-align: center;
+    /* position: absolute; */
+    /* top: 1.5rem;
+    left: 22rem; */
+    text-shadow: 0 0 10px white;
+}
+.choices{
+    width: 600px;
+    height: 170px;
+    display: flex;
+    position: absolute;
+    left: 15rem;
+    top: 6rem; 
+    gap: 2rem;
+    /* border: 1px solid black; */
+    perspective: 1000px;
+}
+.choice{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* background-size: cover; */
+}
+#rock:hover{
+    /* opacity: 0.5; */
+    cursor: pointer;
+    background-color: palevioletred;
+    transform: translateZ(5px);
+}
+#paper:hover{
+    /* opacity: 0.5; */
+    cursor: pointer;
+    background-color:royalblue;
+    transform: translateZ(5px);
+}
+#scissors:hover{
+    /* opacity: 0.5; */
+    cursor: pointer;
+    background-color: rgb(226, 230, 42);
+    transform: translateZ(5px);
+}
+img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.score-board{
+    height: 110px;
+    width: 240px;
+    position: absolute;
+    left: 24rem;
+    top: 20rem; 
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: 2.5rem;
+    margin-right: 4.5rem;
+}
+.msg-container:hover{
+    transform: perspective(1000px) translateZ(1rem);
+    font-size: 2rem;
+    opacity: 2;
+    cursor:grab;
+}
+.score{
+    width: 88px;
+    background-color: thistle;
+}
+.text{
+    border-top: 4px ridge #081b31;
+    position: relative;
+    top: 0.6rem;
+    background-color: #fff;
+}
+#user{
+    text-align: center;
+    padding-bottom: 11px;
+    border-bottom: 4px ridge #081b31;
+    background-color: #fff;
+    font-size: 4rem;
+}
+#comp{
+    text-align: center;
+    padding-bottom: 11px;
+    border-bottom: 4px ridge #081b31;
+    background-color: #fff;
+    font-size: 4rem;
+
+}
+.msg-container{
+    position: relative;
+    top: 27rem;
+    display: inline-block;
+    background-color: #081b31;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+}
