@@ -7,31 +7,41 @@
    
 </head>
 <body class="bg-gradient-to-br from-purple-200 to-cyan-200 via-pink-100">
-    <h1 class="bg-slate-900 text-center w-screen text-white font-bold text-5xl py-5 drop-shadow-md shadow-slate-300">Rock Paper Scissors</h1>
-    <div class="choices w-[50rem] h-52 flex items-center justify-center gap-8 mt-12 mx-auto">
-        <div class="choice flex items-center h-40 w-40" id="rock">
+    <!-- Heading -->
+    <h1 class="bg-slate-900 text-center w-full text-white font-bold text-3xl md:text-5xl py-3 md:py-5 drop-shadow-md shadow-slate-300">
+        Rock Paper Scissors
+    </h1>
+
+    <!-- Choices Section -->
+    <div class="choices w-full md:w-[50rem] h-auto flex items-center justify-center gap-4 md:gap-8 mt-8 md:mt-12 mx-auto">
+        <div class="choice flex items-center h-24 w-24 md:h-40 md:w-40" id="rock">
             <img src="rr.png" class="rounded-full object-fill hover:border-solid border-4 hover:border-sky-500">
         </div>
-        <div class="choice flex items-center h-40 w-40" id="paper">
+        <div class="choice flex items-center h-24 w-24 md:h-40 md:w-40" id="paper">
             <img src="pp.png" class="rounded-full object-fill hover:border-solid border-4 hover:border-sky-500">
         </div>
-        <div class="choice flex items-center h-40 w-40" id="scissors">
+        <div class="choice flex items-center h-24 w-24 md:h-40 md:w-40" id="scissors">
             <img src="ssss.png" class="rounded-full object-fill hover:border-solid border-4 hover:border-sky-500">
         </div>
     </div>
-    <div class="score-board mt-10 mx-auto w-[50rem] h-auto flex items-center justify-center gap-24">
-        <div class="score rounded-lg  w-32 text-white font-black flex flex-col items-center space-y-8">
-            <p id="user" class="w-28 h-24 rounded-2xl pt-6 text-4xl text-center items-center bg-slate-800"><b>0</b></p>
-            <p class="text bg-slate-800 text-3xl w-28 rounded-xl text-center h-12 pt-1"><b>user</b></p>
+
+    <!-- Score Board -->
+    <div class="score-board mt-8 md:mt-10 mx-auto w-full md:w-[50rem] h-auto flex items-center justify-center gap-12 md:gap-24">
+        <div class="score rounded-lg w-24 md:w-32 text-white font-black flex flex-col items-center space-y-4 md:space-y-8">
+            <p id="user" class="w-20 h-20 md:w-28 md:h-24 rounded-2xl pt-4 md:pt-6 text-2xl md:text-4xl text-center items-center bg-slate-800"><b>0</b></p>
+            <p class="text bg-slate-800 text-xl md:text-3xl w-20 md:w-28 rounded-xl text-center h-10 md:h-12 pt-1"><b>user</b></p>
         </div>
-        <div class="score rounded-lg w-32 text-white font-black flex flex-col items-center space-y-8">
-            <p id="comp" class="w-28 h-24 rounded-2xl pt-6 text-4xl text-center items-center bg-slate-800"><b>0</b></p>
-            <p class="text bg-slate-800 text-3xl w-28 rounded-xl text-center h-12 pt-1"><b>comp</b></p>
+        <div class="score rounded-lg w-24 md:w-32 text-white font-black flex flex-col items-center space-y-4 md:space-y-8">
+            <p id="comp" class="w-20 h-20 md:w-28 md:h-24 rounded-2xl pt-4 md:pt-6 text-2xl md:text-4xl text-center items-center bg-slate-800"><b>0</b></p>
+            <p class="text bg-slate-800 text-xl md:text-3xl w-20 md:w-28 rounded-xl text-center h-10 md:h-12 pt-1"><b>comp</b></p>
         </div>
     </div>
-    <div class="msg-container w-[35rem] h-14 pt-1 text-center rounded-xl bg-slate-900 mx-auto mt-12 text-white text-3xl font-bold">
+
+    <!-- Message Container -->
+    <div class="msg-container w-full md:w-[35rem] h-12 md:h-14 pt-1 text-center rounded-xl bg-slate-900 mx-auto mt-8 md:mt-12 text-white text-xl md:text-3xl font-bold">
         <p id="msg"><b>Play your move</b></p>
     </div>
+
     <script src="/src/app.js"></script>
 </body>
 </html>
