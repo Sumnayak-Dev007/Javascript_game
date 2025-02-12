@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" crossorigin href="/assets/index-pXf9x8AX.css">
+</head>
+<body class="bg-gradient-to-br from-purple-200 to-cyan-200 via-pink-100">
+    <h1 class="bg-slate-900 text-center w-screen text-white font-bold text-5xl py-5 drop-shadow-md shadow-slate-300">Rock Paper Scissors</h1>
+    <div class="choices w-[50rem] h-52 flex items-center justify-center gap-8 mt-12 mx-auto">
+        <div class="choice flex items-center h-40 w-40" id="rock">
+            <img src="/assets/rr-Bn_XFEWK.png" class="rounded-full object-fill hover:border-solid border-4 hover:border-sky-500">
+        </div>
+        <div class="choice flex items-center h-40 w-40" id="paper">
+            <img src="/assets/pp-CPfBL8ki.png" class="rounded-full object-fill hover:border-solid border-4 hover:border-sky-500">
+        </div>
+        <div class="choice flex items-center h-40 w-40" id="scissors">
+            <img src="/assets/ssss-hgOaud2z.png" class="rounded-full object-fill hover:border-solid border-4 hover:border-sky-500">
+        </div>
+    </div>
+    <div class="score-board mt-10 mx-auto w-[50rem] h-auto flex items-center justify-center gap-24">
+        <div class="score rounded-lg  w-32 text-white font-black flex flex-col items-center space-y-8">
+            <p id="user" class="w-28 h-24 rounded-2xl pt-6 text-4xl text-center items-center bg-slate-800"><b>0</b></p>
+            <p class="text bg-slate-800 text-3xl w-28 rounded-xl text-center h-12 pt-1"><b>user</b></p>
+        </div>
+        <div class="score rounded-lg w-32 text-white font-black flex flex-col items-center space-y-8">
+            <p id="comp" class="w-28 h-24 rounded-2xl pt-6 text-4xl text-center items-center bg-slate-800"><b>0</b></p>
+            <p class="text bg-slate-800 text-3xl w-28 rounded-xl text-center h-12 pt-1"><b>comp</b></p>
+        </div>
+    </div>
+    <div class="msg-container w-[35rem] h-14 pt-1 text-center rounded-xl bg-slate-900 mx-auto mt-12 text-white text-3xl font-bold">
+        <p id="msg"><b>Play your move</b></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
