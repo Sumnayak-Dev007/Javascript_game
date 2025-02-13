@@ -4,34 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-  <link rel="stylesheet" crossorigin href="/assets/index-pXf9x8AX.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-CtToZ-ww.css">
 </head>
 <body class="bg-gradient-to-br from-purple-200 to-cyan-200 via-pink-100">
-    <h1 class="bg-slate-900 text-center w-screen text-white font-bold text-5xl py-5 drop-shadow-md shadow-slate-300">Rock Paper Scissors</h1>
-    <div class="choices w-[50rem] h-52 flex items-center justify-center gap-8 mt-12 mx-auto">
-        <div class="choice flex items-center h-40 w-40" id="rock">
-            <img src="/assets/rr-Bn_XFEWK.png" class="rounded-full object-fill hover:border-solid border-4 hover:border-sky-500">
-        </div>
-        <div class="choice flex items-center h-40 w-40" id="paper">
-            <img src="/assets/pp-CPfBL8ki.png" class="rounded-full object-fill hover:border-solid border-4 hover:border-sky-500">
-        </div>
-        <div class="choice flex items-center h-40 w-40" id="scissors">
-            <img src="/assets/ssss-hgOaud2z.png" class="rounded-full object-fill hover:border-solid border-4 hover:border-sky-500">
-        </div>
+    <!-- Heading -->
+    <h1 class="bg-slate-900 text-center w-full text-white font-bold text-3xl md:text-5xl py-3 md:py-5 drop-shadow-md shadow-slate-300">
+        Rock Paper Scissors
+    </h1>
+    <h4 class="text-center text-slate-900 font-bold text-2xl md:text-3xl mt-4 md:mt-6">
+        AI vs You
+    </h4>
+        <!-- Score Board and Message Container (unchanged) -->
+<div class="score-board mt-8 md:mt-10 mx-auto w-full md:w-[50rem] h-auto flex items-center justify-center gap-12 md:gap-24">
+    <div class="score rounded-lg w-24 md:w-32 text-white font-black flex flex-col items-center space-y-4 md:space-y-8">
+        <p id="user" class="w-20 h-20 md:w-28 md:h-24 rounded-2xl pt-4 md:pt-6 text-2xl md:text-4xl text-center items-center bg-slate-800"><b>0</b></p>
+        <p class="text bg-slate-800 text-xl md:text-3xl w-20 md:w-28 rounded-xl text-center h-10 md:h-12 pt-1"><b>user</b></p>
     </div>
-    <div class="score-board mt-10 mx-auto w-[50rem] h-auto flex items-center justify-center gap-24">
-        <div class="score rounded-lg  w-32 text-white font-black flex flex-col items-center space-y-8">
-            <p id="user" class="w-28 h-24 rounded-2xl pt-6 text-4xl text-center items-center bg-slate-800"><b>0</b></p>
-            <p class="text bg-slate-800 text-3xl w-28 rounded-xl text-center h-12 pt-1"><b>user</b></p>
-        </div>
-        <div class="score rounded-lg w-32 text-white font-black flex flex-col items-center space-y-8">
-            <p id="comp" class="w-28 h-24 rounded-2xl pt-6 text-4xl text-center items-center bg-slate-800"><b>0</b></p>
-            <p class="text bg-slate-800 text-3xl w-28 rounded-xl text-center h-12 pt-1"><b>comp</b></p>
-        </div>
+    <div class="score rounded-lg w-24 md:w-32 text-white font-black flex flex-col items-center space-y-4 md:space-y-8">
+        <p id="comp" class="w-20 h-20 md:w-28 md:h-24 rounded-2xl pt-4 md:pt-6 text-2xl md:text-4xl text-center items-center bg-slate-800"><b>0</b></p>
+        <p class="text bg-slate-800 text-xl md:text-3xl w-20 md:w-28 rounded-xl text-center h-10 md:h-12 pt-1"><b>comp</b></p>
     </div>
-    <div class="msg-container w-[35rem] h-14 pt-1 text-center rounded-xl bg-slate-900 mx-auto mt-12 text-white text-3xl font-bold">
-        <p id="msg"><b>Play your move</b></p>
+</div>
+    <!-- Choices Section -->
+<div class="choices w-full md:w-[50rem] h-auto flex items-center justify-center gap-4 md:gap-8 mt-8 md:mt-12 mx-auto">
+    <div class="choice flex items-center h-24 w-24 md:h-40 md:w-40" id="rock">
+        <img src="/assets/rock-Bn_XFEWK.png" class="rounded-full object-fill hover:border-solid border-4 hover:border-sky-500">
     </div>
-    <script src="app.js"></script>
+    <div class="choice flex items-center h-24 w-24 md:h-40 md:w-40" id="paper">
+        <img src="/assets/paper-CPfBL8ki.png" class="rounded-full object-fill hover:border-solid border-4 hover:border-sky-500">
+    </div>
+    <div class="choice flex items-center h-24 w-24 md:h-40 md:w-40" id="scissors">
+        <img src="/assets/scissors-hgOaud2z.png" class="rounded-full object-fill hover:border-solid border-4 hover:border-sky-500">
+    </div>
+</div>
+
+<!-- User and Computer Choices Display -->
+<div class="choices-display w-full md:w-[50rem] h-auto flex items-center justify-center gap-12 md:gap-24 mt-8 md:mt-12 mx-auto">
+    <div class="user-choice-display">
+        <p class="text-center text-slate-900 font-bold text-2xl md:text-3xl">Your Choice</p>
+        <div id="user-choice" class="choice-display flex items-center justify-center h-24 w-24 md:h-40 md:w-40"></div>
+    </div>
+    <div class="comp-choice-display">
+        <p class="text-center text-slate-900 font-bold text-2xl md:text-3xl">Computer's Choice</p>
+        <div id="comp-choice" class="choice-display flex items-center justify-center h-24 w-24 md:h-40 md:w-40"></div>
+    </div>
+</div>
+
+
+
+<!-- Message Container -->
+<div class="msg-container cursor-pointer w-full md:w-[35rem] h-12 md:h-14 pt-1 text-center rounded-xl bg-slate-900 mx-auto mt-8 md:mt-12 text-white text-xl md:text-3xl font-bold">
+    <p id="msg"><b>Play your move</b></p>
+</div>
+
+    <script src="/src/app.js"></script>
+<!-- new commit -->
+
+<script>
+    // Get the element with id 'msg'
+    const msgElement = document.getElementById('msg');
+
+    // Add a click event listener to the element
+    msgElement.addEventListener('click', function() {
+        // Change the text when clicked
+        msgElement.innerHTML = '<b>Click any hand gesture</b>';
+    });
+</script>
 </body>
 </html>
