@@ -67,12 +67,14 @@ const playGame = (userChoice) => {
     const compChoice = genCompChoice();
     console.log("comp choice=", compChoice);
 
-    // Display user's choice
-    userChoiceDisplay.innerHTML = `<img src="${userChoice}.png" class="rounded-full object-fill w-full h-full">`;
-
-    // Display computer's choice
-    compChoiceDisplay.innerHTML = `<img src="${compChoice}.png" class="rounded-full object-fill w-full h-full">`;
-
+     // Display user's choice
+     const userChoiceImage = document.querySelector(`#${userChoice} img`).src;
+     userChoiceDisplay.innerHTML = `<img src="${userChoiceImage}" class="rounded-full object-fill w-full h-full">`;
+ 
+     // Display computer's choice
+     const compChoiceImage = `images/${compChoice}.png`; // Adjust the path if needed
+     compChoiceDisplay.innerHTML = `<img src="${compChoiceImage}" class="rounded-full object-fill w-full h-full">`;
+ 
     if (userChoice === compChoice) {
         drawGame();
     } else {
