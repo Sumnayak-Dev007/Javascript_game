@@ -68,10 +68,10 @@ const playGame = (userChoice) => {
     console.log("comp choice=", compChoice);
 
     // Display user's choice
-    userChoiceDisplay.innerHTML = `<img src="${userChoice}.png" class="rounded-full object-fill">`;
+    userChoiceDisplay.innerHTML = `<img src="${userChoice}.png" class="rounded-full object-fill w-full h-full">`;
 
     // Display computer's choice
-    compChoiceDisplay.innerHTML = `<img src="${compChoice}.png" class="rounded-full object-fill">`;
+    compChoiceDisplay.innerHTML = `<img src="${compChoice}.png" class="rounded-full object-fill w-full h-full">`;
 
     if (userChoice === compChoice) {
         drawGame();
