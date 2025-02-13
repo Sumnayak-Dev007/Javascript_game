@@ -1,7 +1,6 @@
 let userScore = 0;
 let compScore = 0;
 
-
 // DOM Elements
 const Choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
@@ -10,7 +9,6 @@ const userScorePara = document.querySelector("#user");
 const compScorePara = document.querySelector("#comp");
 const userChoiceDisplay = document.querySelector("#user-choice");
 const compChoiceDisplay = document.querySelector("#comp-choice");
-
 
 // Generate Computer Choice
 const genCompChoice = () => {
@@ -52,18 +50,17 @@ const playGame = (userChoice) => {
     const compChoice = genCompChoice();
 
     // Display User Choice
-    const userChoiceImage = `/public/rock.png`; // Now directly accessible from public/
+    const userChoiceImage = document.querySelector(`#${userChoice} img`).src;
     userChoiceDisplay.innerHTML = `<img src="${userChoiceImage}" class="rounded-full w-full h-full">`;
-
     
     // Ensure choice display is visible
     userChoiceDisplay.style.display = "flex";
     compChoiceDisplay.style.display = "flex";
 
-    
-  // Display Computer Choice
-  const compChoiceImage = `/public/scissors.png`; // Access from public/ folder
-  compChoiceDisplay.innerHTML = `<img src="${compChoiceImage}" class="rounded-full w-full h-full">`;
+    // Display Computer Choice
+    const compChoiceImage = `./${compChoice}.png`; // Adjust path if needed
+    compChoiceDisplay.innerHTML = `<img src="${compChoiceImage}" class="rounded-full w-full h-full">`;
+
     // Determine Winner
     if (userChoice === compChoice) {
         drawGame();
