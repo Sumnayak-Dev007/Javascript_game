@@ -52,7 +52,7 @@ const playGame = (userChoice) => {
     const compChoice = genCompChoice();
 
     // Display User Choice
-    const userChoiceImage = `/rock.png`; // Now directly accessible from public/
+    const userChoiceImage = `/public/rock.png`; // Now directly accessible from public/
     userChoiceDisplay.innerHTML = `<img src="${userChoiceImage}" class="rounded-full w-full h-full">`;
 
     
@@ -62,7 +62,7 @@ const playGame = (userChoice) => {
 
     
   // Display Computer Choice
-  const compChoiceImage = `/scissors.png`; // Access from public/ folder
+  const compChoiceImage = `/public/scissors.png`; // Access from public/ folder
   compChoiceDisplay.innerHTML = `<img src="${compChoiceImage}" class="rounded-full w-full h-full">`;
     // Determine Winner
     if (userChoice === compChoice) {
