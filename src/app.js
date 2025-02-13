@@ -58,7 +58,7 @@ const playGame = (userChoice) => {
     compChoiceDisplay.style.display = "flex";
 
     // Display Computer Choice
-    const compChoiceImage = `./${compChoice}.png`; // Adjust path if needed
+    const compChoiceImage = document.querySelector(`#${compChoice} img`).src ;// Adjust path if needed
     compChoiceDisplay.innerHTML = `<img src="${compChoiceImage}" class="rounded-full w-full h-full">`;
 
     // Determine Winner
