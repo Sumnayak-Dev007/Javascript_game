@@ -10,6 +10,7 @@ const compScorePara = document.querySelector("#comp");
 const userChoiceDisplay = document.querySelector("#user-choice");
 const compChoiceDisplay = document.querySelector("#comp-choice");
 
+
 // Generate Computer Choice
 const genCompChoice = () => {
     const options = ["rock", "paper", "scissors"];
@@ -48,7 +49,7 @@ const drawGame = () => {
 // Play Game Logic
 const playGame = (userChoice) => {
     const compChoice = genCompChoice();
-
+    
     // Display User Choice
     const userChoiceImage = document.querySelector(`#${userChoice} img`).src;
     userChoiceDisplay.innerHTML = `<img src="${userChoiceImage}" class="rounded-full w-full h-full">`;
