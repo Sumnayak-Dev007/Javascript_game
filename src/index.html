@@ -5,6 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="input.css">
+    <style>
+        /* General Styles for All Screens */
+.choices-display {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Space between user and computer choices */
+    margin-top: 20px; /* Add some top margin */
+}
+
+.choices-display.flex {
+    display: flex; /* Show when flex class is added */
+}
+
+.user-choice-display,
+.comp-choice-display {
+    text-align: center; /* Center text */
+}
+
+.choice-display {
+    margin-top: 10px; /* Space between text and image */
+}
+
+/* Mobile Styles (Apply to Screens Below 768px) */
+@media (max-width: 768px) {
+    .choices-display {
+        width: 100%; /* Full width on mobile */
+        padding: 0 10px; /* Add some padding */
+    }
+
+    .user-choice-display,
+    .comp-choice-display {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .choice-display {
+        width: 100px; /* Smaller width for mobile */
+        height: 100px; /* Smaller height for mobile */
+    }
+
+    .choices-display p {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+}
+    </style>
 </head>
 <body class="bg-gradient-to-br from-purple-200 to-cyan-200 via-pink-100">
     <!-- Heading -->
