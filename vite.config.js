@@ -1,10 +1,13 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  root: 'src',  // This sets the root directory to src/
+  root: 'src', // Tells Vite to use the "src" folder as the root
+  base: '/',  // Ensures correct paths in production
   build: {
-    outDir: '../dist',  // Output the build files to the dist folder (outside src/)
-    emptyOutDir: true,  // Clean the dist folder before building
+    outDir: '../dist',  // Ensures the built files go into "dist"
+    emptyOutDir: true,
+    rollupOptions: {
+      input: 'src/index.html',  // Ensures correct file resolution
+    },
   },
 });
-

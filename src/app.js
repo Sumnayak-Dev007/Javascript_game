@@ -9,7 +9,7 @@ const userScorePara = document.querySelector("#user");
 const compScorePara = document.querySelector("#comp");
 const userChoiceDisplay = document.querySelector("#user-choice");
 const compChoiceDisplay = document.querySelector("#comp-choice");
-
+const images = import.meta.glob('/src/assets/*.png', { eager: true });
 // Generate Computer Choice
 const genCompChoice = () => {
     const options = ["rock", "paper", "scissors"];
@@ -49,16 +49,16 @@ const drawGame = () => {
 const playGame = (userChoice) => {
     const compChoice = genCompChoice();
 
-    // Display User Choice
-    const userChoiceImage = document.querySelector(`#${userChoice} img`).src;
+    const userChoiceImage = images[`/src/assets/${userChoice}.png`];
     userChoiceDisplay.innerHTML = `<img src="${userChoiceImage}" class="rounded-full w-full h-full">`;
     
     // Ensure choice display is visible
     userChoiceDisplay.style.display = "flex";
     compChoiceDisplay.style.display = "flex";
 
+    
     // Display Computer Choice
-    const compChoiceImage = `./${compChoice}.png`; // Adjust path if needed
+    const compChoiceImage = images[`/src/assets/${compChoice}.png`];
     compChoiceDisplay.innerHTML = `<img src="${compChoiceImage}" class="rounded-full w-full h-full">`;
 
     // Determine Winner
