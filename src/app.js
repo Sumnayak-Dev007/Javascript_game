@@ -42,7 +42,7 @@ const showWinner = (userWin, userChoice, compChoice) => {
 
 // Draw Game
 const drawGame = () => {
-    msg.innerText = "Game was a draw. Play again!";
+    msg.innerText = "It's a draw. Play again!";
     container.style.backgroundColor = "#081b31";
 };
 
