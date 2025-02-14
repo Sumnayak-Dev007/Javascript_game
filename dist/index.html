@@ -79,12 +79,13 @@ choices.forEach((choice) => {
 <script>
     // Get the element with id 'msg'
     const msgElement = document.getElementById('msg');
+    const msgcont = document.querySelector('.msg-container')
 
     // Add a click event listener to the element
     msgElement.addEventListener('click', function() {
         // Change the text when clicked
         msgElement.innerHTML = '<b>click any image to start</b>';
-        msgElement.style.backgroundColor = "purple"
+        msgcont.style.backgroundColor = "purple"
     });
 </script>
 
